@@ -6,16 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuTrigger && mobileMenu) {
     menuTrigger.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
+      mobileMenu.classList.add('active');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
     });
   }
 
   if (menuClose && mobileMenu) {
     menuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('active');
       document.body.style.overflow = '';
     });
   }
@@ -25,9 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const element = document.getElementById(id);
     if (element) {
       // Close mobile menu if open
-      if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenu.classList.remove('translate-x-0');
+      if (mobileMenu && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
       }
       
