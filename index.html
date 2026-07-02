@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Master premium languages like German, Spanish, Japanese, Italian, or Portuguese with Coresca Language School. Get personalized attention and 100% placement support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <title>Coresca Language School | Learn a Language. Build a Global Career.</title>
+  <link href="style.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body class="min-h-screen bg-[#FDFBF7] text-[#0F172A] selection:bg-[#14B8A6] selection:text-white">
+<header class="sticky top-0 z-40 w-full border-b border-slate-200/50 bg-[#FDFBF7]/80 backdrop-blur-md">
+          <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
+            <div class="flex cursor-pointer items-center space-x-3 transition-opacity hover:opacity-90" data-testid="coresca-logo">
+              <div class="relative h-10 w-10 overflow-hidden rounded-full border border-[#D4AF37] shadow-sm">
+                <img alt="Coresca School Logo" class="h-full w-full object-cover" src="assets/logo.jpeg">
+              </div>
+              <div>
+                <span class="font-heading text-lg font-bold tracking-tight text-[#0A2540] md:text-xl">
+                  Coresca
+                </span>
+                <span class="block text-[10px] uppercase tracking-widest text-[#14B8A6] font-semibold">
+                  Language School
+                </span>
+              </div>
+            </div>
+            <nav class="hidden items-center space-x-8 md:flex">
+              <button class="font-body text-sm font-medium text-[#475569] transition-colors hover:text-[#0A2540]" data-testid="coresca-nav-link-programs">
+                Programs
+              </button>
+              <button class="font-body text-sm font-medium text-[#475569] transition-colors hover:text-[#0A2540]" data-testid="coresca-nav-link-benefits">
+                Why Choose Us
+              </button>
+              <button class="font-body text-sm font-medium text-[#475569] transition-colors hover:text-[#0A2540]" data-testid="coresca-nav-link-testimonials">
+                Reviews
+              </button>
+              <button class="font-body text-sm font-medium text-[#475569] transition-colors hover:text-[#0A2540]" data-testid="coresca-nav-link-contact">
+                Contact
+              </button>
+            </nav>
+            <div class="hidden items-center space-x-4 md:flex">
+              <button class="bg-[#0A2540] text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-opacity-95 shadow-md active:scale-95 transition-all text-center border-2 border-transparent hover:border-[#D4AF37]" data-testid="coresca-navbar-book-demo-btn">
+                Book Free Demo
+              </button>
+            </div>
+            <button id="mobile-menu-trigger" class="flex items-center text-[#0A2540] focus:outline-none md:hidden" aria-label="Toggle Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" aria-hidden="true">
+                <path d="M4 12h16">
+                </path>
+                <path d="M4 18h16">
+                </path>
+                <path d="M4 6h16">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </header>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#FDFBF7] transition-all duration-300 transform translate-x-full flex flex-col md:hidden">
+          <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200/50 bg-[#FDFBF7]">
+            <div class="flex items-center space-x-3">
+              <div class="relative h-10 w-10 overflow-hidden rounded-full border border-[#D4AF37] shadow-sm">
+                <img alt="Coresca School Logo" class="h-full w-full object-cover" src="assets/logo.jpeg">
+              </div>
+              <div>
+                <span class="font-heading text-lg font-bold tracking-tight text-[#0A2540]">Coresca</span>
+                <span class="block text-[10px] uppercase tracking-widest text-[#14B8A6] font-semibold">Language School</span>
+              </div>
+            </div>
+            <button id="mobile-menu-close" class="text-[#0A2540] focus:outline-none" aria-label="Close Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="flex-1 flex flex-col items-center justify-center space-y-8 px-6">
+            <button class="font-body text-xl font-medium text-[#475569] transition-colors hover:text-[#0A2540] mobile-nav-link" data-target="programs">Programs</button>
+            <button class="font-body text-xl font-medium text-[#475569] transition-colors hover:text-[#0A2540] mobile-nav-link" data-target="benefits">Why Choose Us</button>
+            <button class="font-body text-xl font-medium text-[#475569] transition-colors hover:text-[#0A2540] mobile-nav-link" data-target="testimonials">Reviews</button>
+            <button class="font-body text-xl font-medium text-[#475569] transition-colors hover:text-[#0A2540] mobile-nav-link" data-target="contact">Contact</button>
+            <button class="bg-[#0A2540] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-opacity-95 shadow-md active:scale-95 transition-all text-center border-2 border-transparent hover:border-[#D4AF37] mobile-nav-link" data-target="demo-form">Book Free Demo</button>
+          </nav>
+        </div>
+        <section id="hero" class="relative overflow-hidden py-16 md:py-24">
+          <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:px-12">
+            <div class="space-y-6 md:pr-4">
+              <div class="inline-flex items-center space-x-2 rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-1.5 text-xs font-semibold text-[#0A2540]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-4.5 w-4.5 text-[#D4AF37] animate-pulse" aria-hidden="true">
+                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                  </path>
+                  <path d="M20 3v4">
+                  </path>
+                  <path d="M22 5h-4">
+                  </path>
+                  <path d="M4 17v2">
+                  </path>
+                  <path d="M5 18H3">
+                  </path>
+                </svg>
+                <span>
+                  Free Demo Class Registration Open
+                </span>
+              </div>
+              <h1 class="font-heading text-4xl font-extrabold tracking-tight text-[#0A2540] sm:text-5xl lg:text-6xl leading-tight">
+                Learn a Language.
+                <br>
+                <span class="text-[#14B8A6]">
+                  Build a Global Career.
+                </span>
+              </h1>
+              <p class="font-body text-base text-[#475569] md:text-lg max-w-lg leading-relaxed">
+                Master premium languages like German, Spanish, Japanese, Italian, or Portuguese. Get personalized attention in limited batches, and 100% placement support to crack top MNC jobs.
+              </p>
+              <div class="grid grid-cols-3 gap-4 py-3">
+                <div class="flex flex-col items-start border-l-2 border-[#14B8A6] pl-3">
+                  <span class="font-heading text-xl font-extrabold text-[#0A2540] flex items-center">
+                    5.0
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star ml-1 h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="font-body text-[11px] font-semibold text-[#475569] uppercase tracking-wide">
+                    6+ Google Reviews
+                  </span>
+                </div>
+                <div class="flex flex-col items-start border-l-2 border-[#D4AF37] pl-3">
+                  <span class="font-heading text-xl font-extrabold text-[#0A2540]">
+                    Max 10
+                  </span>
+                  <span class="font-body text-[11px] font-semibold text-[#475569] uppercase tracking-wide">
+                    Students Per Batch
+                  </span>
+                </div>
+                <div class="flex flex-col items-start border-l-2 border-[#0A2540] pl-3">
+                  <span class="font-heading text-xl font-extrabold text-[#0A2540]">
+                    100%
+                  </span>
+                  <span class="font-body text-[11px] font-semibold text-[#475569] uppercase tracking-wide">
+                    Placement Support
+                  </span>
+                </div>
+              </div>
+              <div class="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0 pt-2">
+                <button class="bg-[#0A2540] text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 shadow-lg hover:shadow-xl hover:shadow-[#0A2540]/10 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all text-center flex items-center justify-center space-x-2" data-testid="coresca-hero-book-demo-btn">
+                  <span>
+                    Book Free Demo
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4 text-white" aria-hidden="true">
+                    <path d="M5 12h14">
+                    </path>
+                    <path d="m12 5 7 7-7 7">
+                    </path>
+                  </svg>
+                </button>
+                <button class="border-2 border-[#0A2540] text-[#0A2540] px-8 py-4 rounded-full font-bold hover:bg-[#0A2540] hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all text-center" data-testid="coresca-hero-explore-programs-btn">
+                  Explore Programs
+                </button>
+              </div>
+            </div>
+            <div class="relative flex items-center justify-center">
+              <div class="absolute -z-10 h-72 w-72 rounded-full bg-[#14B8A6]/10 blur-2xl">
+              </div>
+              <div class="absolute -z-10 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl translate-x-12 translate-y-12">
+              </div>
+              <div class="relative p-6 bg-white/40 backdrop-blur-md rounded-full border border-white/50 shadow-2xl transition-transform duration-500 hover:scale-105">
+                <div class="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-[#D4AF37] p-2 bg-[#0A2540]/5 shadow-inner">
+                  <img alt="Coresca Language School Mascot Branding" class="h-full w-full rounded-full object-cover transition-transform duration-700 hover:scale-110" src="assets/logo.jpeg">
+                </div>
+                <div class="absolute -bottom-2 -left-4 rounded-2xl bg-white p-4 shadow-lg border border-slate-100 flex items-center space-x-3 animate-bounce" style="animation-duration: 3s;">
+                  <div class="rounded-full bg-emerald-100 p-2 text-emerald-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 stroke-[3px]" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-heading text-sm font-bold text-[#0A2540]">
+                      Flexible Batches
+                    </span>
+                    <span class="block text-[10px] text-[#475569]">
+                      Working Professionals &amp; Students
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute -right-4 top-12 rounded-2xl bg-white p-4 shadow-lg border border-slate-100 flex items-center space-x-3">
+                  <div class="rounded-full bg-teal-100 p-2 text-[#14B8A6]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10">
+                      </circle>
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20">
+                      </path>
+                      <path d="M2 12h20">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block font-heading text-sm font-bold text-[#0A2540]">
+                      Online &amp; Offline
+                    </span>
+                    <span class="block text-[10px] text-[#475569]">
+                      Dehradun &amp; Nationwide
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="programs" class="bg-white py-20 md:py-28 border-y border-slate-100">
+          <div class="mx-auto max-w-7xl px-6 md:px-12">
+            <div class="mx-auto mb-16 max-w-3xl text-center space-y-4">
+              <span class="font-heading text-xs font-bold tracking-widest text-[#14B8A6] uppercase">
+                Explore Our Offerings
+              </span>
+              <h2 class="font-heading text-3xl font-extrabold text-[#0A2540] sm:text-4xl">
+                Professional Foreign Language Programs
+              </h2>
+              <p class="font-body text-sm text-[#475569] md:text-base leading-relaxed">
+                We specialize in top-tier European and Asian language instruction. Join over 60+ successful learners training for global fluency and certified accolades.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div data-testid="coresca-program-card-german" class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-50 border border-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#D4AF37]/50">
+                <div class="relative h-48 w-full overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+                  </div>
+                  <img alt="German Language" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1566404791232-af9fe0ae8f8b?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=85&amp;w=800">
+                  <span class="absolute right-4 top-4 z-20 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-wide text-[#0A2540] uppercase shadow-sm">
+                    Goethe, TestDaF Preparation
+                  </span>
+                  <div class="absolute bottom-4 left-4 z-20">
+                    <span class="block font-heading text-xl font-extrabold text-white">
+                      German Language
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div class="space-y-3">
+                    <span class="block font-heading text-xs font-bold uppercase tracking-wider text-[#14B8A6]">
+                      Study, Work, or Live in Germany
+                    </span>
+                    <p class="font-body text-xs text-[#475569] leading-relaxed">
+                      Prepare for Goethe-Zertifikat (A1-C2). Master speaking and grammar with our immersive curriculum.
+                    </p>
+                    <div class="pt-2">
+                      <span class="text-[11px] font-bold text-[#0A2540] block mb-1.5 uppercase tracking-wider">
+                        Levels Offered:
+                      </span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          C1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          C2
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="w-full border border-slate-300 text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all duration-200 flex items-center justify-center space-x-1">
+                    <span>
+                      Inquire Now
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div data-testid="coresca-program-card-spanish" class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-50 border border-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#D4AF37]/50">
+                <div class="relative h-48 w-full overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+                  </div>
+                  <img alt="Spanish Language" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=85&amp;w=800">
+                  <span class="absolute right-4 top-4 z-20 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-wide text-[#0A2540] uppercase shadow-sm">
+                    DELE, SIELE Preparation
+                  </span>
+                  <div class="absolute bottom-4 left-4 z-20">
+                    <span class="block font-heading text-xl font-extrabold text-white">
+                      Spanish Language
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div class="space-y-3">
+                    <span class="block font-heading text-xs font-bold uppercase tracking-wider text-[#14B8A6]">
+                      Unlock Opportunities in 20+ Countries
+                    </span>
+                    <p class="font-body text-xs text-[#475569] leading-relaxed">
+                      Prepare for DELE / SIELE exams. Learn conversational Spanish for international commerce and culture.
+                    </p>
+                    <div class="pt-2">
+                      <span class="text-[11px] font-bold text-[#0A2540] block mb-1.5 uppercase tracking-wider">
+                        Levels Offered:
+                      </span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          C1
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="w-full border border-slate-300 text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all duration-200 flex items-center justify-center space-x-1">
+                    <span>
+                      Inquire Now
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div data-testid="coresca-program-card-japanese" class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-50 border border-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#D4AF37]/50">
+                <div class="relative h-48 w-full overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+                  </div>
+                  <img alt="Japanese Language" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=85&amp;w=800">
+                  <span class="absolute right-4 top-4 z-20 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-wide text-[#0A2540] uppercase shadow-sm">
+                    JLPT N5 - N1 Preparation
+                  </span>
+                  <div class="absolute bottom-4 left-4 z-20">
+                    <span class="block font-heading text-xl font-extrabold text-white">
+                      Japanese Language
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div class="space-y-3">
+                    <span class="block font-heading text-xs font-bold uppercase tracking-wider text-[#14B8A6]">
+                      Premium Careers in Tech &amp; Global MNCs
+                    </span>
+                    <p class="font-body text-xs text-[#475569] leading-relaxed">
+                      Learn Hiragana, Katakana, and Kanji. Comprehensive prep for JLPT (N5 to N1) with corporate placement support.
+                    </p>
+                    <div class="pt-2">
+                      <span class="text-[11px] font-bold text-[#0A2540] block mb-1.5 uppercase tracking-wider">
+                        Levels Offered:
+                      </span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          N5
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          N4
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          N3
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          N2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          N1
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="w-full border border-slate-300 text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all duration-200 flex items-center justify-center space-x-1">
+                    <span>
+                      Inquire Now
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div data-testid="coresca-program-card-italian" class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-50 border border-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#D4AF37]/50">
+                <div class="relative h-48 w-full overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+                  </div>
+                  <img alt="Italian Language" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=85&amp;w=800">
+                  <span class="absolute right-4 top-4 z-20 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-wide text-[#0A2540] uppercase shadow-sm">
+                    CILS, CELI Preparation
+                  </span>
+                  <div class="absolute bottom-4 left-4 z-20">
+                    <span class="block font-heading text-xl font-extrabold text-white">
+                      Italian Language
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div class="space-y-3">
+                    <span class="block font-heading text-xs font-bold uppercase tracking-wider text-[#14B8A6]">
+                      The Language of Design, Art, and Gastronomy
+                    </span>
+                    <p class="font-body text-xs text-[#475569] leading-relaxed">
+                      Prepare for CILS / CELI exams. Speak fluently and connect with Italy's premier luxury and design houses.
+                    </p>
+                    <div class="pt-2">
+                      <span class="text-[11px] font-bold text-[#0A2540] block mb-1.5 uppercase tracking-wider">
+                        Levels Offered:
+                      </span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          C1
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="w-full border border-slate-300 text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all duration-200 flex items-center justify-center space-x-1">
+                    <span>
+                      Inquire Now
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div data-testid="coresca-program-card-portuguese" class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-50 border border-slate-200/60 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#D4AF37]/50">
+                <div class="relative h-48 w-full overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+                  </div>
+                  <img alt="Portuguese Language" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1536663815808-535e2280d2c2?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=85&amp;w=800">
+                  <span class="absolute right-4 top-4 z-20 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-wide text-[#0A2540] uppercase shadow-sm">
+                    Celpe-Bras Preparation
+                  </span>
+                  <div class="absolute bottom-4 left-4 z-20">
+                    <span class="block font-heading text-xl font-extrabold text-white">
+                      Portuguese Language
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div class="space-y-3">
+                    <span class="block font-heading text-xs font-bold uppercase tracking-wider text-[#14B8A6]">
+                      Enter Emerging Global Markets
+                    </span>
+                    <p class="font-body text-xs text-[#475569] leading-relaxed">
+                      Prepare for Celpe-Bras. Master business Portuguese for expanding trade opportunities in Brazil &amp; Europe.
+                    </p>
+                    <div class="pt-2">
+                      <span class="text-[11px] font-bold text-[#0A2540] block mb-1.5 uppercase tracking-wider">
+                        Levels Offered:
+                      </span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          A2
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B1
+                        </span>
+                        <span class="bg-slate-100 text-slate-700 font-body text-[10px] font-bold px-2 py-0.5 rounded-md">
+                          B2
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="w-full border border-slate-300 text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all duration-200 flex items-center justify-center space-x-1">
+                    <span>
+                      Inquire Now
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="benefits" class="py-20 md:py-28">
+          <div class="mx-auto max-w-7xl px-6 md:px-12">
+            <div class="mx-auto mb-16 max-w-3xl text-center space-y-4">
+              <span class="font-heading text-xs font-bold tracking-widest text-[#D4AF37] uppercase">
+                The Coresca Edge
+              </span>
+              <h2 class="font-heading text-3xl font-extrabold text-[#0A2540] sm:text-4xl">
+                Why Choose Coresca?
+              </h2>
+              <p class="font-body text-sm text-[#475569] md:text-base leading-relaxed">
+                We focus on premium quality, personalized support, and practical result-oriented methods. Here are the pillars of why our language programs excel.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12">
+              <div data-testid="coresca-benefit-card-0" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#0A2540] text-white col-span-1 md:col-span-2 lg:col-span-6">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-6 w-6" aria-hidden="true">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                      </path>
+                      <path d="M16 3.128a4 4 0 0 1 0 7.744">
+                      </path>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                      </path>
+                      <circle cx="9" cy="7" r="4">
+                      </circle>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Limited Students Per Batch
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      We strictly keep only 8-10 students in a batch to ensure the trainer can focus on every individual's learning speed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-1" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#14B8A6] text-white col-span-1 md:col-span-2 lg:col-span-6">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-6 w-6" aria-hidden="true">
+                      <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                      </path>
+                      <circle cx="12" cy="8" r="6">
+                      </circle>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      100% Placement Assistance
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Get placement drives, CV reviews, mock interviews, and career alignment sessions to secure high-paying MNC job roles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-2" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check h-6 w-6" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10">
+                      </circle>
+                      <path d="m9 12 2 2 4-4">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Personalized Attention
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      One-on-one reviews, direct feedback on speech clarity, pronunciation, and detailed essay grading.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-3" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-6 w-6" aria-hidden="true">
+                      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                      </path>
+                      <path d="m9 12 2 2 4-4">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Experienced Trainers
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Classes led by certified, highly experienced trainers with years of corporate and pedagogical experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-4" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-6 w-6" aria-hidden="true">
+                      <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                      </path>
+                      <path d="M20 3v4">
+                      </path>
+                      <path d="M22 5h-4">
+                      </path>
+                      <path d="M4 17v2">
+                      </path>
+                      <path d="M5 18H3">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Interactive Live Sessions
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      No pre-recorded static lectures. All online classes are interactive, engaging, and simulated live classrooms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-5" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-6">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-6 w-6" aria-hidden="true">
+                      <path d="M12 7v14">
+                      </path>
+                      <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Speaking, Reading, Writing &amp; Listening Practice
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      We cover all four pillars of language proficiency thoroughly in every single session with mock tests.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-6" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-6">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked h-6 w-6" aria-hidden="true">
+                      <path d="M10 2v8l3-3 3 3V2">
+                      </path>
+                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      International Exam Preparation
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Full exam alignment (Goethe-Zertifikat, JLPT, DELE, CILS, CELPE) including official sample papers solved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-7" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square h-6 w-6" aria-hidden="true">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Interview Preparation &amp; Mock Interviews
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Crack challenging language round interviews. Standard mock drills with seasoned HR feedback.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-8" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase h-6 w-6" aria-hidden="true">
+                      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16">
+                      </path>
+                      <rect width="20" height="14" x="2" y="6" rx="2">
+                      </rect>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Career Guidance &amp; Resume Support
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Optimize your resume with language certifications and get targeted pathways to global jobs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-testid="coresca-benefit-card-9" class="p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow transition-all duration-200 bg-[#FDFBF7] text-[#0A2540] border border-slate-200 col-span-1 lg:col-span-4">
+                <div class="space-y-4">
+                  <div class="inline-block p-3 rounded-xl bg-white/10 border border-white/15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock h-6 w-6" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10">
+                      </circle>
+                      <polyline points="12 6 12 12 16 14">
+                      </polyline>
+                    </svg>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-heading text-lg font-bold tracking-tight">
+                      Flexible Timings &amp; Certificates
+                    </h3>
+                    <p class="font-body text-xs leading-relaxed opacity-90">
+                      Classes that fit your busy schedule perfectly. Get certified immediately upon course completion.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="testimonials" class="bg-white py-20 md:py-28 border-t border-slate-100">
+          <div class="mx-auto max-w-7xl px-6 md:px-12">
+            <div class="mx-auto mb-16 max-w-3xl text-center space-y-4">
+              <span class="font-heading text-xs font-bold tracking-widest text-[#14B8A6] uppercase">
+                Verified Reviews
+              </span>
+              <h2 class="font-heading text-3xl font-extrabold text-[#0A2540] sm:text-4xl">
+                What Our Students Say
+              </h2>
+              <p class="font-body text-sm text-[#475569] md:text-base leading-relaxed">
+                Real reviews from Google Maps. Check our outstanding track record of student growth, certified accomplishments, and placements.
+              </p>
+            </div>
+            <div class="flex justify-center mb-10">
+              <div class="inline-flex items-center space-x-3 rounded-full bg-slate-50 border border-slate-200 px-6 py-2.5">
+                <span class="font-heading font-extrabold text-sm text-[#0A2540]">
+                  Google Maps Rating:
+                </span>
+                <div class="flex items-center space-x-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                    </path>
+                  </svg>
+                </div>
+                <span class="font-body text-sm font-bold text-[#0A2540]">
+                  5.0 (6 reviews)
+                </span>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+              <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                  <div class="flex space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                  </div>
+                  <p class="font-body text-xs italic text-[#475569] leading-relaxed">
+                    “I highly recommend Coresca Language School to anyone looking to learn a new language or improve their communication skills. It is a great place to learn, grow, and achieve your language goals.”
+                  </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/50">
+                  <div class="h-10 w-10 rounded-full bg-[#0A2540] flex items-center justify-center text-white font-heading font-bold text-sm">
+                    M
+                  </div>
+                  <div>
+                    <span class="block font-heading text-sm font-bold text-[#0A2540]">
+                      Monika Dohare
+                    </span>
+                    <span class="block font-body text-[10px] text-[#475569]">
+                      Language Student • 2 weeks ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                  <div class="flex space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                  </div>
+                  <p class="font-body text-xs italic text-[#475569] leading-relaxed">
+                    “I studied at Coresca Language School for 6 months, and it was one of the best decisions for my career. The trainers were supportive, and the practical learning approach helped improve my communication skills and confidence. Thanks to their guidance, I was able to secure a job in an MNC. Highly recommended!”
+                  </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/50">
+                  <div class="h-10 w-10 rounded-full bg-[#0A2540] flex items-center justify-center text-white font-heading font-bold text-sm">
+                    L
+                  </div>
+                  <div>
+                    <span class="block font-heading text-sm font-bold text-[#0A2540]">
+                      Lawanya Nagpal
+                    </span>
+                    <span class="block font-body text-[10px] text-[#475569]">
+                      MNC Professional • 3 weeks ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                  <div class="flex space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                  </div>
+                  <p class="font-body text-xs italic text-[#475569] leading-relaxed">
+                    “Great learning experience at Coresca Language School! The teaching approach is practical, interactive, and easy to understand. Highly recommended for anyone looking to learn German and build international career opportunities.”
+                  </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/50">
+                  <div class="h-10 w-10 rounded-full bg-[#0A2540] flex items-center justify-center text-white font-heading font-bold text-sm">
+                    S
+                  </div>
+                  <div>
+                    <span class="block font-heading text-sm font-bold text-[#0A2540]">
+                      Sudhanshu Sharma
+                    </span>
+                    <span class="block font-body text-[10px] text-[#475569]">
+                      Local Guide • 2 weeks ago
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="demo-form" class="py-20 md:py-28 bg-[#FDFBF7]">
+          <div class="mx-auto max-w-7xl px-6 md:px-12">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
+              <div class="lg:col-span-5 space-y-6">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#D4AF37] uppercase">
+                  Reserve Your Spot
+                </span>
+                <h2 class="font-heading text-3xl font-extrabold text-[#0A2540] sm:text-4xl leading-tight">
+                  Attend A Free Interactive Demo Class
+                </h2>
+                <p class="font-body text-sm text-[#475569] md:text-base leading-relaxed">
+                  Experience first-hand how our personalized batches work, meet our professional trainers, and get clear career guidance based on your profile goals.
+                </p>
+                <div class="space-y-3.5 pt-4">
+                  <div class="flex items-start space-x-3">
+                    <div class="rounded-full bg-emerald-100 p-1 text-emerald-600 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-3.5 w-3.5 stroke-[3px]" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5">
+                        </path>
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="font-heading text-sm font-bold text-[#0A2540] block">
+                        Interactive Q&amp;A Session
+                      </span>
+                      <span class="font-body text-xs text-[#475569]">
+                        Ask our trainers questions directly and clarify levels.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="rounded-full bg-emerald-100 p-1 text-emerald-600 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-3.5 w-3.5 stroke-[3px]" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5">
+                        </path>
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="font-heading text-sm font-bold text-[#0A2540] block">
+                        No Upfront Commitment
+                      </span>
+                      <span class="font-body text-xs text-[#475569]">
+                        Absolutely free interactive trial session of 45-60 minutes.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="rounded-full bg-emerald-100 p-1 text-emerald-600 mt-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-3.5 w-3.5 stroke-[3px]" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5">
+                        </path>
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="font-heading text-sm font-bold text-[#0A2540] block">
+                        Custom Placement Guidance
+                      </span>
+                      <span class="font-body text-xs text-[#475569]">
+                        Receive real paths to career alignments, studies, and certifications.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-2xl border border-slate-200/70 shadow-lg relative">
+                <div class="absolute -top-3 -right-3 bg-[#14B8A6] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-sm animate-pulse">
+                  Demo Booking Open
+                </div>
+                <h3 class="font-heading text-2xl font-extrabold text-[#0A2540] mb-2">
+                  Book Your Free Demo
+                </h3>
+                <p class="font-body text-xs text-[#475569] mb-6">
+                  Fill the simple inquiry form below. We will coordinate a suitable batch timing for you.
+                </p>
+                <form class="space-y-4">
+                  <div class="space-y-1.5">
+                    <label for="name" class="block text-xs font-bold text-[#0A2540] uppercase tracking-wider">
+                      Full Name
+                      <span class="text-red-500">
+                        *
+                      </span>
+                    </label>
+                    <input id="name" required="" placeholder="Enter your full name" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-body" data-testid="coresca-demo-form-name" type="text" value="">
+                  </div>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div class="space-y-1.5">
+                      <label for="phone" class="block text-xs font-bold text-[#0A2540] uppercase tracking-wider">
+                        Phone / WhatsApp
+                        <span class="text-red-500">
+                          *
+                        </span>
+                      </label>
+                      <input id="phone" required="" placeholder="e.g. 9876543210" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-body" data-testid="coresca-demo-form-phone" type="tel" value="">
+                    </div>
+                    <div class="space-y-1.5">
+                      <label for="email" class="block text-xs font-bold text-[#0A2540] uppercase tracking-wider">
+                        Email Address
+                        <span class="text-red-500">
+                          *
+                        </span>
+                      </label>
+                      <input id="email" required="" placeholder="e.g. harshdohare49@gmail.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-body" data-testid="coresca-demo-form-email" type="email" value="">
+                    </div>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="language" class="block text-xs font-bold text-[#0A2540] uppercase tracking-wider">
+                      Language Interested In
+                      <span class="text-red-500">
+                        *
+                      </span>
+                    </label>
+                    <select id="language" required="" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-body text-[#0F172A] cursor-pointer" data-testid="coresca-demo-form-language">
+                      <option value="German">
+                        German Language
+                      </option>
+                      <option value="Spanish">
+                        Spanish Language
+                      </option>
+                      <option value="Japanese">
+                        Japanese Language
+                      </option>
+                      <option value="Italian">
+                        Italian Language
+                      </option>
+                      <option value="Portuguese">
+                        Portuguese Language
+                      </option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="message" class="block text-xs font-bold text-[#0A2540] uppercase tracking-wider">
+                      Message / Batch Preference (Optional)
+                    </label>
+                    <textarea id="message" placeholder="Tell us about your learning experience or preferred hours (e.g., weekends, late evening)..." rows="3" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-body resize-none" data-testid="coresca-demo-form-message">
+                    </textarea>
+                  </div>
+                  <button type="submit" class="w-full bg-[#0A2540] text-white hover:bg-opacity-95 text-xs font-bold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center space-x-2 border-2 border-transparent hover:border-[#D4AF37]" data-testid="coresca-demo-form-submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send h-4 w-4 text-white" aria-hidden="true">
+                      <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                      </path>
+                      <path d="m21.854 2.147-10.94 10.939">
+                      </path>
+                    </svg>
+                    <span>
+                      Submit Demo Request
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="faq" class="py-20 bg-white md:py-24 border-t border-slate-100">
+          <div class="mx-auto max-w-4xl px-6">
+            <div class="text-center space-y-4 mb-16">
+              <span class="font-heading text-xs font-bold tracking-widest text-[#14B8A6] uppercase">
+                Got Questions?
+              </span>
+              <h2 class="font-heading text-3xl font-extrabold text-[#0A2540]">
+                Frequently Asked Questions
+              </h2>
+              <p class="font-body text-sm text-[#475569]">
+                Find fast answers to help choose Coresca and kickstart your studies.
+              </p>
+            </div>
+            <div class="mx-auto max-w-3xl border border-slate-200 rounded-2xl bg-slate-50/50 p-6 md:p-8">
+              <div class="w-full space-y-4">
+    <div class="border-b border-slate-200 last:border-b-0 faq-item">
+      <h3>
+        <button type="button" class="flex w-full items-center justify-between py-4 text-left font-heading text-sm md:text-base font-bold text-[#0A2540] hover:no-underline transition-all faq-trigger">
+          <span>Are the classes available online or offline?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 faq-icon">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+      </h3>
+      <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+        <p class="pb-4 pt-1 text-slate-500 font-body text-xs md:text-sm leading-relaxed">Both! We offer interactive online live sessions available across India and professional offline classes at our premium center in Doon IT Park, Dehradun.</p>
+      </div>
+    </div>
+    <div class="border-b border-slate-200 last:border-b-0 faq-item">
+      <h3>
+        <button type="button" class="flex w-full items-center justify-between py-4 text-left font-heading text-sm md:text-base font-bold text-[#0A2540] hover:no-underline transition-all faq-trigger">
+          <span>Do I get a certificate on course completion?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 faq-icon">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+      </h3>
+      <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+        <p class="pb-4 pt-1 text-slate-500 font-body text-xs md:text-sm leading-relaxed">Absolutely. Once you finish your program and clear the internal evaluations, you will be awarded an official course completion certificate which is highly regarded by corporate MNC recruiters.</p>
+      </div>
+    </div>
+    <div class="border-b border-slate-200 last:border-b-0 faq-item">
+      <h3>
+        <button type="button" class="flex w-full items-center justify-between py-4 text-left font-heading text-sm md:text-base font-bold text-[#0A2540] hover:no-underline transition-all faq-trigger">
+          <span>How many students are in one batch?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 faq-icon">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+      </h3>
+      <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+        <p class="pb-4 pt-1 text-slate-500 font-body text-xs md:text-sm leading-relaxed">To ensure maximum effectiveness and personalized attention, we strictly limit each batch to only 8 to 10 students. No crowded sessions.</p>
+      </div>
+    </div>
+    <div class="border-b border-slate-200 last:border-b-0 faq-item">
+      <h3>
+        <button type="button" class="flex w-full items-center justify-between py-4 text-left font-heading text-sm md:text-base font-bold text-[#0A2540] hover:no-underline transition-all faq-trigger">
+          <span>How do you help with 100% placement assistance?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 faq-icon">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+      </h3>
+      <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+        <p class="pb-4 pt-1 text-slate-500 font-body text-xs md:text-sm leading-relaxed">We provide comprehensive resume building support, mock interview drills, regular career alignment guidance, and direct recruitment pathways to leading multinational corporations (MNCs) seeking language professionals.</p>
+      </div>
+    </div>
+    <div class="border-b border-slate-200 last:border-b-0 faq-item">
+      <h3>
+        <button type="button" class="flex w-full items-center justify-between py-4 text-left font-heading text-sm md:text-base font-bold text-[#0A2540] hover:no-underline transition-all faq-trigger">
+          <span>Can I take a free demo class before registering?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 faq-icon">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+      </h3>
+      <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+        <p class="pb-4 pt-1 text-slate-500 font-body text-xs md:text-sm leading-relaxed">Yes! We highly encourage you to attend a free interactive demo class. Simply fill out the 'Book Free Demo' form on our website, and our coordinator will schedule your session immediately.</p>
+      </div>
+    </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        <footer id="contact" class="bg-[#0A2540] text-white py-16 md:py-20 relative overflow-hidden">
+          <div class="mx-auto max-w-7xl px-6 md:px-12 grid grid-cols-1 gap-12 md:grid-cols-3">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <div class="relative h-10 w-10 overflow-hidden rounded-full border border-[#D4AF37] p-0.5 bg-white">
+                  <img alt="Coresca Logo" class="h-full w-full rounded-full object-cover" src="assets/logo.jpeg">
+                </div>
+                <div>
+                  <span class="font-heading text-lg font-bold tracking-tight text-white block">
+                    Coresca
+                  </span>
+                  <span class="block text-[9px] uppercase tracking-widest text-[#14B8A6] font-bold">
+                    Language School
+                  </span>
+                </div>
+              </div>
+              <p class="font-body text-xs text-slate-300 leading-relaxed max-w-xs">
+                “Learn a Language. Build a Global Career.” Professional programs designed to unlock placement assurance and elite MNC placements.
+              </p>
+              <div class="pt-2">
+                <span class="text-[10px] text-slate-400 block mb-1 uppercase tracking-wider">
+                  Overall Google Rating:
+                </span>
+                <div class="flex items-center space-x-1">
+                  <span class="font-heading text-sm font-bold text-white">
+                    5.0
+                  </span>
+                  <div class="flex space-x-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg>
+                  </div>
+                  <span class="text-[10px] text-slate-300">
+                    (6 reviews)
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h4 class="font-heading text-sm font-bold uppercase tracking-wider text-[#14B8A6]">
+                Our Language Programs
+              </h4>
+              <ul class="space-y-2 font-body text-xs text-slate-300">
+                <li>
+                  <button class="hover:text-white transition-colors">
+                    German Program (Goethe A1-C2)
+                  </button>
+                </li>
+                <li>
+                  <button class="hover:text-white transition-colors">
+                    Spanish Program (DELE Prep)
+                  </button>
+                </li>
+                <li>
+                  <button class="hover:text-white transition-colors">
+                    Japanese Program (JLPT N5-N1)
+                  </button>
+                </li>
+                <li>
+                  <button class="hover:text-white transition-colors">
+                    Italian Program (CILS Prep)
+                  </button>
+                </li>
+                <li>
+                  <button class="hover:text-white transition-colors">
+                    Portuguese Program (Celpe-Bras)
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-4">
+              <h4 class="font-heading text-sm font-bold uppercase tracking-wider text-[#14B8A6]">
+                Get In Touch
+              </h4>
+              <ul class="space-y-3 font-body text-xs text-slate-300">
+                <li class="flex items-start space-x-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4 text-[#D4AF37] shrink-0 mt-0.5" aria-hidden="true">
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                    </path>
+                  </svg>
+                  <div>
+                    <span class="block text-[10px] text-slate-400 font-bold uppercase">
+                      Phone / WhatsApp
+                    </span>
+                    <a href="tel:+919354358711" class="hover:text-white hover:underline font-semibold text-white">
+                      9354358711
+                    </a>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4 text-[#D4AF37] shrink-0 mt-0.5" aria-hidden="true">
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7">
+                    </path>
+                    <rect x="2" y="4" width="20" height="16" rx="2">
+                    </rect>
+                  </svg>
+                  <div>
+                    <span class="block text-[10px] text-slate-400 font-bold uppercase">
+                      Email Address
+                    </span>
+                    <a href="mailto:Harshdohare49@gmail.com" class="hover:text-white hover:underline text-white font-semibold">
+                      Harshdohare49@gmail.com
+                    </a>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-[#D4AF37] shrink-0 mt-0.5" aria-hidden="true">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                    </path>
+                    <circle cx="12" cy="10" r="3">
+                    </circle>
+                  </svg>
+                  <div>
+                    <span class="block text-[10px] text-slate-400 font-bold uppercase">
+                      Our Center Address
+                    </span>
+                    <span class="leading-relaxed">
+                      Office Space Building, Plot no B2, Sahastradhara Rd, Doon IT Park, Govind Vihar, Dehradun, Uttarakhand 248001
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mx-auto max-w-7xl px-6 md:px-12 mt-12 pt-6 border-t border-slate-800/80 text-center">
+            <p class="font-body text-[10px] text-slate-400">
+              © 2026 Coresca Language School. All rights reserved.
+              <span class="mx-1.5">
+                •
+              </span>
+              Class Modes: Online (Across India) &amp; Offline (Dehradun)
+              <span class="mx-1.5">
+                •
+              </span>
+              Designed with Premium Quality Standards.
+            </p>
+          </div>
+        </footer>
+</body>
+</html>
