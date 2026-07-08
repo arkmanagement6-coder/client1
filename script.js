@@ -170,6 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- INQUIRY FORM SUBMISSION ---
   const form = document.querySelector('#demo-form form');
   if (form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitBtnSpan = submitBtn ? submitBtn.querySelector('span') : null;
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -206,42 +210,70 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error writing to localStorage:', err);
       }
 
+      // Set button to loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        if (submitBtnSpan) {
+          submitBtnSpan.textContent = 'Submitting Request...';
+        }
+      }
+
       // 2. Submit Email notification via Web3Forms
       if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== 'YOUR_ACCESS_KEY_HERE') {
-        const formData = new FormData();
-        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-        formData.append('subject', `New Demo Inquiry: ${name} (${language})`);
-        formData.append('from_name', 'Coresca Website Form');
-        formData.append('name', name);
-        formData.append('phone', phone);
-        formData.append('email', email);
-        formData.append('language', language);
-        formData.append('message', message || 'No custom batch preference or message provided.');
+        const payload = {
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Demo Inquiry: ${name} (${language})`,
+          from_name: 'Coresca Website Form',
+          name: name,
+          phone: phone,
+          email: email,
+          language: language,
+          message: message || 'No custom batch preference or message provided.'
+        };
 
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: formData
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
         })
         .then(response => response.json())
         .then(data => {
           if (data.success) {
             console.log('Inquiry email dispatched successfully via Web3Forms.');
+            // Reset form
+            form.reset();
+            // Show success Toast Alert
+            showToast('Thank you!', 'Our team will reach out to you as soon as possible.');
           } else {
             console.error('Failed to dispatch inquiry email:', data.message);
+            // Show error Toast Alert
+            showToast('Submission Issue', `${data.message}. Please click verify link in your Web3Forms email!`);
           }
         })
         .catch(err => {
           console.error('Network error during Web3Forms inquiry dispatch:', err);
+          showToast('Network Error', 'Please check your internet connection and try again.');
+        })
+        .finally(() => {
+          // Restore button state
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+          }
         });
       } else {
         console.warn('Web3Forms Access Key is not configured. Email dispatch skipped.');
+        // Reset form & show toast (fallback behavior)
+        form.reset();
+        showToast('Thank you!', 'Our team will reach out to you as soon as possible.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
       }
-
-      // Reset form
-      form.reset();
-
-      // Show beautiful Toast Alert
-      showToast('Success!', 'Your free demo class has been booked. Our coordinator will contact you shortly!');
     });
   }
 
