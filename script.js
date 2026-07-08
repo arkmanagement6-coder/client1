@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
 // Get your Web3Forms Access Key from https://web3forms.com/ and paste it below
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "aada2cd7-ed67-455f-bbdc-526f99afb507";
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- MOBILE MENU TOGGLE ---
