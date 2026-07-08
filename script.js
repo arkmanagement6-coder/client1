@@ -1,3 +1,7 @@
+// --- CONFIGURATION ---
+// Get your Web3Forms Access Key from https://web3forms.com/ and paste it below
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 document.addEventListener('DOMContentLoaded', () => {
   // --- MOBILE MENU TOGGLE ---
   const mobileMenu = document.getElementById('mobile-menu');
@@ -185,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         date: new Date().toISOString()
       };
 
-      // Load existing inquiries from localStorage or empty array
+      // 1. Load existing inquiries from localStorage or empty array (Local Backup)
       let inquiries = [];
       try {
         const stored = localStorage.getItem('coresca_inquiries');
@@ -200,6 +204,37 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('coresca_inquiries', JSON.stringify(inquiries));
       } catch (err) {
         console.error('Error writing to localStorage:', err);
+      }
+
+      // 2. Submit Email notification via Web3Forms
+      if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== 'YOUR_ACCESS_KEY_HERE') {
+        const formData = new FormData();
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('subject', `New Demo Inquiry: ${name} (${language})`);
+        formData.append('from_name', 'Coresca Website Form');
+        formData.append('name', name);
+        formData.append('phone', phone);
+        formData.append('email', email);
+        formData.append('language', language);
+        formData.append('message', message || 'No custom batch preference or message provided.');
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            console.log('Inquiry email dispatched successfully via Web3Forms.');
+          } else {
+            console.error('Failed to dispatch inquiry email:', data.message);
+          }
+        })
+        .catch(err => {
+          console.error('Network error during Web3Forms inquiry dispatch:', err);
+        });
+      } else {
+        console.warn('Web3Forms Access Key is not configured. Email dispatch skipped.');
       }
 
       // Reset form
