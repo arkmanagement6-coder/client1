@@ -167,12 +167,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- INQUIRY FORM SUBMISSION ---
-  const form = document.querySelector('#demo-form form');
-  if (form) {
+  // --- INQUIRY FORM SUBMISSION & SUCCESS FLOW ---
+  function initFormListener() {
+    const card = document.getElementById('demo-form-card');
+    if (!card) return;
+
+    const form = card.querySelector('form');
+    if (!form) return;
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const submitBtnSpan = submitBtn ? submitBtn.querySelector('span') : null;
     const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+    const originalCardHTML = card.innerHTML;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -243,21 +249,49 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
           if (data.success) {
             console.log('Inquiry email dispatched successfully via Web3Forms.');
-            // Reset form
-            form.reset();
-            // Show success Toast Alert
-            showToast('Thank you!', 'Our team will reach out to you as soon as possible.');
+            
+            // Show premium success view inside the card
+            card.innerHTML = `
+              <div class="flex flex-col items-center justify-center text-center py-12 px-4 animate-fade-in">
+                <div class="bg-teal-50 text-[#14B8A6] rounded-full p-4 shrink-0 mb-6 border-2 border-teal-100/50 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-[#14B8A6]">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <h3 class="font-heading text-3xl font-extrabold text-[#0A2540] mb-3">Thank you!</h3>
+                <p class="font-body text-slate-500 text-sm max-w-sm leading-relaxed mb-8">
+                  Our team will reach out to you as soon as possible.
+                </p>
+                <button id="reset-form-btn" class="bg-[#0A2540] text-white px-6 py-2.5 rounded-full text-xs font-semibold hover:bg-opacity-95 shadow-md active:scale-95 transition-all text-center border-2 border-transparent hover:border-[#D4AF37]">
+                  Submit Another Request
+                </button>
+              </div>
+            `;
+
+            // Bind click event to restore form
+            const resetBtn = card.querySelector('#reset-form-btn');
+            if (resetBtn) {
+              resetBtn.addEventListener('click', () => {
+                card.innerHTML = originalCardHTML;
+                initFormListener(); // Re-initialize listeners!
+              });
+            }
+
           } else {
             console.error('Failed to dispatch inquiry email:', data.message);
             // Show error Toast Alert
             showToast('Submission Issue', `${data.message}. Please click verify link in your Web3Forms email!`);
+            // Restore button state
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHTML;
+            }
           }
         })
         .catch(err => {
           console.error('Network error during Web3Forms inquiry dispatch:', err);
           showToast('Network Error', 'Please check your internet connection and try again.');
-        })
-        .finally(() => {
           // Restore button state
           if (submitBtn) {
             submitBtn.disabled = false;
@@ -266,16 +300,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       } else {
         console.warn('Web3Forms Access Key is not configured. Email dispatch skipped.');
-        // Reset form & show toast (fallback behavior)
-        form.reset();
-        showToast('Thank you!', 'Our team will reach out to you as soon as possible.');
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnHTML;
+        // Fallback for missing key (simulate success)
+        card.innerHTML = `
+          <div class="flex flex-col items-center justify-center text-center py-12 px-4 animate-fade-in">
+            <div class="bg-teal-50 text-[#14B8A6] rounded-full p-4 shrink-0 mb-6 border-2 border-teal-100/50 shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check text-[#14B8A6]">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-3xl font-extrabold text-[#0A2540] mb-3">Thank you!</h3>
+            <p class="font-body text-slate-500 text-sm max-w-sm leading-relaxed mb-8">
+              Our team will reach out to you as soon as possible.
+            </p>
+            <button id="reset-form-btn" class="bg-[#0A2540] text-white px-6 py-2.5 rounded-full text-xs font-semibold hover:bg-opacity-95 shadow-md active:scale-95 transition-all text-center border-2 border-transparent hover:border-[#D4AF37]">
+              Submit Another Request
+            </button>
+          </div>
+        `;
+        const resetBtn = card.querySelector('#reset-form-btn');
+        if (resetBtn) {
+          resetBtn.addEventListener('click', () => {
+            card.innerHTML = originalCardHTML;
+            initFormListener();
+          });
         }
       }
     });
   }
+
+  // Initialize the form event listeners
+  initFormListener();
 
   // --- TOAST NOTIFICATION UTILITY ---
   function showToast(title, message) {
